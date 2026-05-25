@@ -1,0 +1,103 @@
+/* ============================================
+   RECURSOS
+   ============================================ */
+.recursos {
+    background: #f7fafc;
+    padding: 100px 0;
+}
+
+.recursos-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.recurso-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.recurso-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(10, 22, 40, 0.08);
+    border-color: rgba(30, 136, 229, 0.2);
+}
+
+.recurso-header {
+    background: linear-gradient(135deg, #0a1628, #112240);
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.recurso-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.recurso-icon .material-symbols-outlined {
+    color: #00e5ff;
+    font-size: 24px;
+}
+
+.recurso-header h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.recurso-body {
+    padding: 24px 28px 28px;
+}
+
+.recurso-body p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.recurso-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1e88e5;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.3s ease;
+}
+
+.recurso-link:hover {
+    gap: 10px;
+    color: #42a5f5;
+}
+
+.recurso-link .material-symbols-outlined {
+    font-size: 18px;
+}
+
+/* ============================================
+   RECURSOS RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .recursos-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

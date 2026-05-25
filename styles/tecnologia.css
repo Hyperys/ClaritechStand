@@ -1,0 +1,169 @@
+/* ============================================
+   TECNOLOGIA
+   ============================================ */
+.tecnologia {
+    background: #0a1628;
+    padding: 100px 0;
+    color: #ffffff;
+}
+
+.tecnologia .section-label {
+    color: #42a5f5;
+}
+
+.tecnologia .section-title {
+    color: #ffffff;
+}
+
+.tecnologia .section-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.tecnologia-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.tecnologia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.hardware-card {
+    background: rgba(17, 34, 64, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 32px;
+}
+
+.hardware-tag {
+    display: inline-block;
+    background: rgba(0, 229, 255, 0.12);
+    color: #00e5ff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.hardware-card h3 {
+    color: #ffffff;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.hardware-card p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.sensors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.sensor-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+}
+
+.sensor-pill .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00e5ff;
+}
+
+.pipeline {
+    position: relative;
+    padding-left: 32px;
+}
+
+.pipeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: linear-gradient(180deg, #1e88e5, #00e5ff, #42a5f5);
+    border-radius: 2px;
+}
+
+.pipeline-step {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.pipeline-step:last-child {
+    margin-bottom: 0;
+}
+
+.pipeline-step::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #0a1628;
+    border: 3px solid #00e5ff;
+    z-index: 2;
+}
+
+.pipeline-step h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e88e5, #00e5ff);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0a1628;
+    flex-shrink: 0;
+}
+
+.pipeline-step p {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.875rem;
+    line-height: 1.7;
+    padding-left: 38px;
+}
+
+/* ============================================
+   TECNOLOGIA RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .tecnologia-grid {
+        grid-template-columns: 1fr;
+    }
+}

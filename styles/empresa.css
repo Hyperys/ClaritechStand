@@ -1,0 +1,208 @@
+/* ============================================
+   EMPRESA
+   ============================================ */
+.empresa {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.empresa-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.tabs-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.tab-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #64748b;
+    background: #f1f5f9;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.tab-btn:hover {
+    color: #0a1628;
+    background: #e2e8f0;
+}
+
+.tab-btn.active {
+    color: #ffffff;
+    background: #0a1628;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-content p {
+    font-size: 1.05rem;
+    color: #475569;
+    line-height: 1.8;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.valor-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 18px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.valor-item:hover {
+    border-color: rgba(30, 136, 229, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(10, 22, 40, 0.05);
+}
+
+/* ============================================
+   NUEVOS ESTILOS PARA LOS ICONOS GOOGLE
+   ============================================ */
+.valor-icon {
+    font-size: 28px !important; /* Tamaño consistente */
+    color: #1e88e5 !important;  /* Color solicitado */
+    flex-shrink: 0;
+}
+
+/* ============================================
+   FIN DE NUEVOS ESTILOS
+   ============================================ */
+
+.valor-item h4 {
+    font-size: 0.95rem;
+    color: #0a1628;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.valor-item p {
+    font-size: 0.8rem !important;
+    color: #64748b !important;
+    line-height: 1.5 !important;
+}
+
+.team-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px;
+}
+
+.team-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+    color: #0a1628;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.team-member:last-child {
+    border-bottom: none;
+}
+
+.member-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.member-avatar.aa { background: linear-gradient(135deg, #1e88e5, #42a5f5); }
+.member-avatar.ms { background: linear-gradient(135deg, #00c853, #69f0ae); }
+.member-avatar.ja { background: linear-gradient(135deg, #ff9100, #ffd180); }
+
+.member-info h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0a1628;
+    margin-bottom: 2px;
+}
+
+.member-info p {
+    font-size: 0.8rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.team-badge {
+    display: inline-block;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #0a1628, #112240);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+/* ============================================
+   EMPRESA RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .empresa-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tabs-header {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tab-content p {
+        text-align: center;
+    }
+}

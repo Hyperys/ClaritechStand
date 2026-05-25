@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claritech - Tecnología Inteligente para Agua Limpia</title>
+    <!-- Importing Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Importing Icons (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .bg-custom-dark-blue {
+            background-color: #0a1f3d;
+        }
+        .text-custom-dark-blue {
+            color: #0a1f3d;
+        }
+        .btn-custom-primary {
+            background-color: #0a1f3d;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-custom-primary:hover {
+            background-color: #143666;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(10, 31, 61, 0.3);
+        }
+        .btn-custom-primary:active {
+            transform: translateY(0);
+        }
+        .btn-custom-secondary {
+            border: 2px solid rgba(255,255,255,0.6);
+            color: white;
+            background: transparent;
+            backdrop-filter: blur(4px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-custom-secondary:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+        }
+        .hero-section {
+            background-image: linear-gradient(135deg, rgba(10, 31, 61, 0.7) 0%, rgba(10, 31, 61, 0.3) 100%), url('BG.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to top, #0a1f3d, transparent);
+            pointer-events: none;
+        }
+        .feature-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            background: rgba(255,255,255,0.04);
+        }
+        .feature-card:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-6px);
+        }
+        .feature-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.08);
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover .feature-icon {
+            background: rgba(255,255,255,0.15);
+            transform: scale(1.05);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0a1f3d;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .hero-content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION / HEADER -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100/50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="PaletaFriaDiosa.png" alt="Claritech Logo" class="h-10 w-auto">
+                <div class="text-xl font-bold tracking-tight text-custom-dark-blue hidden sm:block">
+                    CLARITECH
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-gray-600 font-medium text-sm">
+                <a href="#" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Soluciones</a>
+                <a href="#" class="nav-link">Tecnología</a>
+                <a href="#" class="nav-link">Recursos</a>
+                <a href="#" class="nav-link">Empresa</a>
+                <a href="#" class="nav-link">Contacto</a>
+            </div>
+            <div>
+                <a href="#" class="btn-custom-primary px-6 py-2.5 rounded-full text-sm font-semibold inline-block">
+                    Solicitar demo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section text-white relative overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 w-full z-10 pt-20 pb-28">
+            <div class="max-w-3xl hero-content">
+                <span class="inline-block text-xs font-semibold tracking-widest uppercase bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/10">
+                    Innovación en tratamiento de agua
+                </span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                    Tecnología inteligente <br> 
+                    <span class="text-blue-300">para agua limpia</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 font-light leading-relaxed max-w-xl">
+                    Soluciones avanzadas de monitoreo y tratamiento de agua impulsadas por IA para un futuro sostenible.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="btn-custom-primary px-8 py-3.5 rounded-full font-semibold text-sm md:text-base inline-block">
+                        Conoce nuestras soluciones
+                    </a>
+                    <a href="#" class="btn-custom-secondary px-8 py-3.5 rounded-full font-semibold text-sm md:text-base inline-block">
+                        <i class="fa-solid fa-play mr-2 text-xs"></i> Ver plataforma
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FEATURES / PRODUCTS SECTION -->
+    <section class="bg-custom-dark-blue text-white py-24 relative">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <span class="text-blue-300 text-sm font-semibold tracking-widest uppercase">Nuestras capacidades</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3">Soluciones inteligentes para el agua</h2>
+                <p class="text-gray-400 mt-3 max-w-lg mx-auto font-light">
+                    Tecnología de punta diseñada para transformar la gestión del agua.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="feature-card text-center md:text-left">
+                    <div class="flex justify-center md:justify-start mb-5">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-water text-2xl text-blue-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Monitoreo en tiempo real</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Datos precisos 24/7 para mejor toma de decisiones.
+                    </p>
+                </div>
+
+                <div class="feature-card text-center md:text-left">
+                    <div class="flex justify-center md:justify-start mb-5">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-brain text-2xl text-blue-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Inteligencia artificial</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Algoritmos predictivos para optimizar procesos.
+                    </p>
+                </div>
+
+                <div class="feature-card text-center md:text-left">
+                    <div class="flex justify-center md:justify-start mb-5">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield-halved text-2xl text-blue-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Cumplimiento asegurado</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Reportes automatizados y alertas de cumplimiento.
+                    </p>
+                </div>
+
+                <div class="feature-card text-center md:text-left">
+                    <div class="flex justify-center md:justify-start mb-5">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-leaf text-2xl text-blue-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Sostenibilidad</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Tecnología que cuida el agua y el medio ambiente.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-custom-dark-blue text-gray-400 py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pb-6 border-b border-gray-700/50">
+                <div class="flex items-center gap-2">
+                    <img src="PaletaFriaDiosa.png" alt="Claritech" class="h-8 w-auto brightness-0 invert opacity-80">
+                    <span class="text-white font-bold text-lg tracking-tight">CLARITECH</span>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition text-sm">LinkedIn</a>
+                    <a href="#" class="hover:text-white transition text-sm">Twitter</a>
+                    <a href="#" class="hover:text-white transition text-sm">YouTube</a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-6 text-xs">
+                <span>&copy; 2026 Claritech. Todos los derechos reservados.</span>
+                <div class="flex space-x-6 mt-2 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Política de privacidad</a>
+                    <a href="#" class="hover:text-white transition">Términos de uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

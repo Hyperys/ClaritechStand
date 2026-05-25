@@ -1,0 +1,75 @@
+/* ============================================
+   SOLUCIONES
+   ============================================ */
+.soluciones {
+    background: #f7fafc;
+    padding: 100px 0;
+}
+
+.soluciones-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.soluciones-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.solucion-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+}
+
+.solucion-card:hover {
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 12px 40px rgba(10, 22, 40, 0.13);
+    border-color: rgba(30, 136, 229, 0.20);
+}
+
+.solucion-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #1e88e5, #42a5f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.solucion-icon .material-symbols-outlined {
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.solucion-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #0a1628;
+    margin-bottom: 12px;
+}
+
+.solucion-card p {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* ============================================
+   SOLUCIONES RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .soluciones-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
